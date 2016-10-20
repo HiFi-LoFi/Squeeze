@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="mYaNwW" name="SqueezeTest" projectType="consoleapp" version="1.0.0"
+              bundleIdentifier="com.hifi-lofi.SqueezeTest" includeBinaryInAppConfig="1"
+              jucerVersion="4.2.3">
+  <MAINGROUP id="IGOiDY" name="SqueezeTest">
+    <GROUP id="{706B5117-D4A6-F8AD-E51B-552417132962}" name="Source">
+      <FILE id="dfYaxc" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+    <FILE id="Vdb6cw" name="README.md" compile="0" resource="0" file="../README.md"/>
+    <FILE id="CftTkQ" name="Squeeze.h" compile="0" resource="0" file="../Squeeze.h"/>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" extraCompilerFlags="">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="SqueezeTest"
+                       cppLanguageStandard="c++11"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="SqueezeTest"
+                       cppLanguageStandard="c++11"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../Juce/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>

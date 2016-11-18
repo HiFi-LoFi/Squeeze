@@ -28,7 +28,6 @@
 #include <condition_variable>
 #include <functional>
 #include <memory>
-#include <thread>
 #include <vector>
 
 
@@ -231,7 +230,7 @@ namespace squeeze
 
     // Don't parallelize the loop if there are not enough iterations
     const size_t iterations = static_cast<size_t>(end - begin);
-    const size_t maxNumberThreads = juce::SystemStats::getNumCpus();
+    const size_t maxNumberThreads = static_cast<size_t>(threadPool.getNumThreads());
     if (iterations <= chunkSize)
     {
       for (; begin != end; ++begin)
@@ -295,7 +294,7 @@ namespace squeeze
   void ParallelFor(juce::ThreadPool& threadPool, I begin, I end, F&& func)
   {
     const size_t iterations = end - begin;
-    const size_t maxNumberThreads = juce::SystemStats::getNumCpus();
+    const size_t maxNumberThreads = static_cast<size_t>(threadPool.getNumThreads());
     const size_t chunkSize = details::ProposeLoopChunkSize(iterations, maxNumberThreads);
     ParallelFor(threadPool, begin, end, chunkSize, std::forward<F>(func));
   }

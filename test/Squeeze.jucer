@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="mYaNwW" name="SqueezeTest" projectType="consoleapp" version="1.0.0"
               bundleIdentifier="com.hifi-lofi.SqueezeTest" includeBinaryInAppConfig="1"
-              jucerVersion="4.2.3">
+              jucerVersion="4.3.0">
   <MAINGROUP id="IGOiDY" name="SqueezeTest">
     <GROUP id="{706B5117-D4A6-F8AD-E51B-552417132962}" name="Source">
       <FILE id="dfYaxc" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
